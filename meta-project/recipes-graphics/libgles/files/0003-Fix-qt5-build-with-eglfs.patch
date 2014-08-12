@@ -1,0 +1,28 @@
+Index: git/include/EGL/eglplatform.h
+===================================================================
+--- git.orig/include/EGL/eglplatform.h
++++ git/include/EGL/eglplatform.h
+@@ -85,6 +85,14 @@ typedef void *EGLNativePixmapType;
+ 
+ #elif defined(__unix__)
+ 
++#ifdef EGL_NO_X11_HEADERS
++
++typedef void             *EGLNativeDisplayType;
++typedef khronos_uintptr_t EGLNativePixmapType;
++typedef khronos_uintptr_t EGLNativeWindowType;
++
++#else
++
+ /* X11 (tentative)  */
+ #include <X11/Xlib.h>
+ #include <X11/Xutil.h>
+@@ -93,6 +101,8 @@ typedef Display *EGLNativeDisplayType;
+ typedef Pixmap   EGLNativePixmapType;
+ typedef Window   EGLNativeWindowType;
+ 
++#endif /* EGL_NO_X11_HEADERS */
++
+ #else
+ #error "Platform not recognized"
+ #endif

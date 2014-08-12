@@ -1,0 +1,26 @@
+Index: qtbase-opensource-src-5.2.1/src/plugins/platforms/eglfs/qeglfshooks_stub.cpp
+===================================================================
+--- qtbase-opensource-src-5.2.1.orig/src/plugins/platforms/eglfs/qeglfshooks_stub.cpp
++++ qtbase-opensource-src-5.2.1/src/plugins/platforms/eglfs/qeglfshooks_stub.cpp
+@@ -249,14 +249,18 @@ EGLNativeWindowType QEglFSHooks::createN
+                                                     const QSurfaceFormat &format)
+ {
+     Q_UNUSED(platformWindow);
+-    Q_UNUSED(size);
+     Q_UNUSED(format);
+-    return 0;
++
++    struct mali_native_window* nativeWindow = new struct mali_native_window();
++    nativeWindow->width = (short unsigned int)size.width();
++    nativeWindow->height = (short unsigned int)size.height();
++
++    return nativeWindow;
+ }
+ 
+ void QEglFSHooks::destroyNativeWindow(EGLNativeWindowType window)
+ {
+-    Q_UNUSED(window);
++    delete window;
+ }
+ 
+ bool QEglFSHooks::hasCapability(QPlatformIntegration::Capability cap) const

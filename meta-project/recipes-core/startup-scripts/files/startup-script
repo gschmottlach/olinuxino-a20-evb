@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Load the Mali graphics driver needed to accelerate framebuffer graphics
+# for the Qt platform eglfs plugin.
+
+/sbin/modprobe mali
+
