@@ -1,0 +1,45 @@
+Index: git/sys_config/a20/a20-olinuxino_micro-lcd10.fex
+===================================================================
+--- git.orig/sys_config/a20/a20-olinuxino_micro-lcd10.fex
++++ git/sys_config/a20/a20-olinuxino_micro-lcd10.fex
+@@ -763,6 +763,10 @@ ap6xxx_bt_regon = port:PB05<1><default><
+ ap6xxx_bt_wake = port:PI20<1><default><default><0>
+ ap6xxx_bt_host_wake = port:PI21<0><default><default><0>
+ 
++[usb_wifi_para]
++usb_wifi_used = 1
++usb_wifi_usbc_num = 2
++
+ [3g_para]
+ 3g_used = 0
+ 3g_usbc_num = 2
+Index: git/sys_config/a20/a20-olinuxino_micro-lcd7.fex
+===================================================================
+--- git.orig/sys_config/a20/a20-olinuxino_micro-lcd7.fex
++++ git/sys_config/a20/a20-olinuxino_micro-lcd7.fex
+@@ -763,6 +763,10 @@ ap6xxx_bt_regon = port:PB05<1><default><
+ ap6xxx_bt_wake = port:PI20<1><default><default><0>
+ ap6xxx_bt_host_wake = port:PI21<0><default><default><0>
+ 
++[usb_wifi_para]
++usb_wifi_used = 1
++usb_wifi_usbc_num = 2
++
+ [3g_para]
+ 3g_used = 0
+ 3g_usbc_num = 2
+Index: git/sys_config/a20/a20-olinuxino_micro.fex
+===================================================================
+--- git.orig/sys_config/a20/a20-olinuxino_micro.fex
++++ git/sys_config/a20/a20-olinuxino_micro.fex
+@@ -763,6 +763,10 @@ ap6xxx_bt_regon = port:PB05<1><default><
+ ap6xxx_bt_wake = port:PI20<1><default><default><0>
+ ap6xxx_bt_host_wake = port:PI21<0><default><default><0>
+ 
++[usb_wifi_para]
++usb_wifi_used = 1
++usb_wifi_usbc_num = 2
++
+ [3g_para]
+ 3g_used = 0
+ 3g_usbc_num = 2

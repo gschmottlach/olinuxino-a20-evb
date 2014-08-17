@@ -6,4 +6,9 @@ LICENSE = "MIT"
 
 inherit core-image
 
+CORE_IMAGE_EXTRA_INSTALL_append = " \ 
+    connman \
+    linux-firmware-ralink \
+    curl \
+"
 
