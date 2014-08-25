@@ -2,7 +2,7 @@ DESCRIPTION = "Base image for OLinuXino boards with Qt5 framebuffer support \
 accelerated with the Mali OpenGl-ES2 drivers."
 
 # Recipe revision
-PR = "r1"
+PR = "r2"
 
 IMAGE_FEATURES += "splash package-management ssh-server-dropbear"
 
@@ -22,4 +22,6 @@ CORE_IMAGE_EXTRA_INSTALL_append = " \
     connman \
     linux-firmware-ralink \
     curl \
+    packagegroup-python-linux-tools \
+    packagegroup-python-core-tools \
 "
