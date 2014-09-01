@@ -20,6 +20,7 @@ CORE_IMAGE_EXTRA_INSTALL_append = " \
     packagegroup-qt-dependencies \
     startup-scripts \ 
     connman \
+    connman-ncurses \
     linux-firmware-ralink \
     curl \
     packagegroup-python-linux-tools \
